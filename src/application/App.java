@@ -27,15 +27,17 @@ public class App {
         cadProd.inserir(p1);
         cadProd.inserir(p2);
         cadProd.inserir(p3);
+        System.out.println(cadProd.toString());
 
         ProdAlcoolico pa1 = new ProdAlcoolico(300, "Vodka", 50.0);
         ProdAlcoolico.setImposto(300);
+        System.out.println("\n\npa1.toString: "+pa1.toString());
+        System.out.println(pa1.getPreco());
 
         ProdEletro pe1 = new ProdEletro(342, "Note", 3.200);
-        System.out.println(pe1.garantia());
+        System.out.println("pe1.toString: "+pe1.toString());
+        System.out.printf("%s%nGarantia %s%n",pe1.toString(),pe1.garantia());
 
-        System.out.println(pa1.getPreco());
-        System.out.println(cadCli.toString());
 
 
     }

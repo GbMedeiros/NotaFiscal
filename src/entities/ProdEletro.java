@@ -6,16 +6,17 @@ import java.time.Month;
 public class ProdEletro extends Produto {
     private static double impostoEletro;
     private static LocalDateTime hora;
-    private static LocalDateTime garantia;
+    private static Month garantia;
     private static Month mes;
 
     public ProdEletro(int cod, String nome, double preco) {
         super(cod, nome, preco);
+        hora = LocalDateTime.now();
     }
 
-    public LocalDateTime garantia() {
-        hora = LocalDateTime.now();
-        return garantia = LocalDateTime.from(hora.getMonth());
+    public Month garantia() {
+        garantia = hora.getMonth();
+        return garantia;
     }
 
     public static void setImposto(double valor) {
@@ -28,6 +29,6 @@ public class ProdEletro extends Produto {
     }
     @Override
     public String toString(){
-        return String.format("");
+        return String.format("%s", garantia);
     }
 }
