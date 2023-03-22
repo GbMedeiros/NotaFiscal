@@ -41,16 +41,20 @@ public class App {
 
         System.out.println(cadProd.toString());
 
-        ProdEletro pe1 = new ProdEletro(342, "Note", 3.200);
-        ProdEletro pe2 = new ProdEletro(234, "Celular", 2.300);
+        ProdEletro pe1 = new ProdEletro(342, "Note", 3200);
+        ProdEletro pe2 = new ProdEletro(234, "Celular", 2300);
         ProdEletro pe3 = new ProdEletro(243, "Carregador", 200);
         ProdEletro pe4 = new ProdEletro(837, "Fone", 30);
         cadProd.inserir(pe1);
         cadProd.inserir(pe2);
         cadProd.inserir(pe3);
         cadProd.inserir(pe4);
+        ProdEletro.setImposto(20);
+        v1.inserir(pe1);
 
-        System.out.println("pe1.toString: " + pe1.toString());
+        System.out.println(pe1.toString());
+
+        System.out.println(v1.getNotaFical());
 
     }
 }

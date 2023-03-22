@@ -1,5 +1,6 @@
 package entities;
 
+import java.text.DateFormat;
 import java.time.LocalDateTime;
 
 public class ProdEletro extends Produto {
@@ -13,7 +14,6 @@ public class ProdEletro extends Produto {
     }
 
     public LocalDateTime garantia() {
-        garantia = hora;
         garantia = hora.plusMonths(3);
         return garantia;
     }
