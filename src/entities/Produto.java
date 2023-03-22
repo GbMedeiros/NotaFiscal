@@ -23,9 +23,12 @@ public class Produto {
     public double getPreco() {
         return preco;
     }
+    public void setPreco(double preco){
+        this.preco = preco;
+    }
 
     @Override
     public String toString() {
-        return String.format("%d %s %7.2f", codigo, nome, preco);
+        return String.format("[%3d] %-15s %5.2f%n", codigo, nome, preco);
     }
 }

@@ -38,10 +38,10 @@ public class CadastroProduto {
 
     @Override
     public String toString() {
-        StringBuilder str = new StringBuilder("\n\nCadastro de Produtos");
+        StringBuilder str = new StringBuilder("\nCadastro de Produtos\n");
         for (Produto pro : produtos) {
-            str.append("\n" + produtos.toString());
+            str.append(pro.toString());
         }
-        return String.format("%s", str);
+        return String.format("%s%n", str);
     }
 }
