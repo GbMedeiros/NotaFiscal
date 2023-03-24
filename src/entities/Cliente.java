@@ -19,6 +19,6 @@ public class Cliente {
     }
     @Override
     public String toString(){
-        return String.format("(%d) %s",codigo, nome);
+        return String.format("[%d] %-15s",codigo, nome);
     }
 }

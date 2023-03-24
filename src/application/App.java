@@ -41,20 +41,37 @@ public class App {
 
         System.out.println(cadProd.toString());
 
-        ProdEletro pe1 = new ProdEletro(342, "Note", 3200);
-        ProdEletro pe2 = new ProdEletro(234, "Celular", 2300);
-        ProdEletro pe3 = new ProdEletro(243, "Carregador", 200);
-        ProdEletro pe4 = new ProdEletro(837, "Fone", 30);
+        ProdEletro pe1 = new ProdEletro(342, "Note", 3200, 30);
+        ProdEletro pe2 = new ProdEletro(234, "Celular", 2300, 30);
+        ProdEletro pe3 = new ProdEletro(243, "Carregador", 200, 7);
+        ProdEletro pe4 = new ProdEletro(837, "Fone", 30, 0);
         cadProd.inserir(pe1);
         cadProd.inserir(pe2);
         cadProd.inserir(pe3);
         cadProd.inserir(pe4);
         ProdEletro.setImposto(20);
         v1.inserir(pe1);
+        System.out.println(v1.getNotaFical());
 
         System.out.println(pe1.toString());
 
-        System.out.println(v1.getNotaFical());
+        ClientePJ pj1 = new ClientePJ("Elon", 3271, "1234");
+        ClientePJ pj2 = new ClientePJ("Naruto", 2516, "4356");
+        ClientePJ pj3 = new ClientePJ("Coregem", 8764, "5246");
+        cadCli.inserir(pj1);
+        cadCli.inserir(pj2);
+        cadCli.inserir(pj3);
+
+        Estudante e1 = new Estudante("Gabriel", 1224, "3132", "11111", "Pucrs");
+        cadCli.inserir(e1);
+        cadCli.inserir(new Estudante("Gien", 5425, "5245", "4234", "URFGS"));
+
+        ClientePF pf1 = new ClientePF("Gumball", 2343, "2352");
+        ClientePF pf2 = new ClientePF("Jones", 5425, "5235");
+        cadCli.inserir(pf1);
+        cadCli.inserir(pf2);
+
+        System.out.println(cadCli.toString());
 
     }
 }

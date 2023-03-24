@@ -29,6 +29,6 @@ public class Produto {
 
     @Override
     public String toString() {
-        return String.format("[%03d] %-15s %5.2f%n", codigo, nome, preco);
+        return String.format("[%d] %-15s %5.2f%n", codigo, nome, preco);
     }
 }
