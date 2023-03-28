@@ -1,6 +1,10 @@
 package entities;
 
-public class Cliente {
+/*  abstratc class
+    nao podendo dar new cliente
+
+ */
+public abstract class Cliente {
 
     private String nome;
     private int codigo;
@@ -17,8 +21,12 @@ public class Cliente {
     public int getCodigo() {
         return codigo;
     }
+    //tem todas filhas, sao obrigadas a instanciar (Modelo)
+    public abstract String getId();
+
+
     @Override
-    public String toString(){
-        return String.format("[%d] %-15s",codigo, nome);
+    public String toString() {
+        return String.format("[%d] %-15s", codigo, nome);
     }
 }

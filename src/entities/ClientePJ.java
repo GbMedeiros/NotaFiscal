@@ -6,7 +6,7 @@ public class ClientePJ extends Cliente {
         super(nome, cod);
         cnpj = umCnpj;
     }
-    public String getCnpj(){
+    public String getId(){
         return cnpj;
     }
     @Override
